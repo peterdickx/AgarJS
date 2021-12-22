@@ -115,9 +115,11 @@ function update() {
             Utils.fillCircle(enemy.x, enemy.y, enemy.size);
         }
 
-        context.fillStyle = Utils.hsl(player.hue, 100, 50);
-        Utils.fillCircle(player.x, player.y, player.size);
+
     }
+    context.fillStyle = Utils.hsl(player.hue, 100, 50);
+    Utils.fillCircle(player.x, player.y, player.size);
+
     if (!hasStarted) {
         context.fillStyle = "black";
         context.font = "bold 32pt Arial";
@@ -154,6 +156,8 @@ function mouseDown(e) {
         hasStarted = false;
         gameOver = false;
         hasWon = false;
+        player.size = 20;
+        player.hue = 0;
         setup();
         update();
     } else {
