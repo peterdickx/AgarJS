@@ -1,1 +1,1 @@
-# AgarJS
+# Agar.JS
